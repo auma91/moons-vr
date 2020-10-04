@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,11 +10,15 @@ public class GhostBuilder : MonoBehaviour
     public int killed = 0;
     public float time;
     public Text txt;
+    public AudioClip SoundToPlay;
+    AudioSource audio;
     void Start()
     {
+        audio = GetComponent<AudioSource>();
 
     }
-    public void Killed() { killed++; txt.text = "Killed: " + killed.ToString(); }
+    public void PlaySound() { audio.PlayOneShot(SoundToPlay); }
+    public void Killed() { PlaySound(); killed++; txt.text = "Killed: " + killed.ToString(); }
     public void DestroyCount() { count-=1; }
     public int RandomSign() {
         return Random.value < .5 ? 1 : -1;
