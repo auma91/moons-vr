@@ -24,6 +24,8 @@ public class SceneController : MonoBehaviour
         spotLight.SetActive(true);
         pointLight.SetActive(false);
     }
+
+    public void clickStop() { Application.Quit(); }
     // Update is called once per frame
     void Update()
     {
