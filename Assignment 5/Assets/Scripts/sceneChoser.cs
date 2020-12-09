@@ -15,7 +15,7 @@ public class sceneChoser : MonoBehaviour
     {
         
     }
-    public void chooseLagoon() { SceneManager.LoadScene(2); }
+    public void chooseLagoon() {SceneManager.LoadScene(2); }
     public void chooseForest() {
         SceneManager.LoadScene(1);
     }
