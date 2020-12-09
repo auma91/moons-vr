@@ -57,7 +57,7 @@ public class instantiate : MonoBehaviour
             transform.Translate(pos * Time.deltaTime, Space.World);
         }
         Vector3 localpos = transform.localPosition;
-        transform.localPosition = new Vector3(localpos.x, 0.4f * Mathf.Sin(hoverspeed * Time.time) + 1.2f, localpos.z);
+        transform.localPosition = new Vector3(localpos.x, 0.1f * Mathf.Sin(hoverspeed * Time.time) + 0.5f, localpos.z);
 
     }
 

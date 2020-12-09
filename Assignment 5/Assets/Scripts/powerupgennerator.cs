@@ -17,9 +17,9 @@ public class powerupgennerator : MonoBehaviour
     {
         return Random.value < .5 ? 1 : -1;
     }
-    public void makePowerUp(int type)
+    public void makePowerUp(int type, float height)
     {
-        var child = (type==0) ? Instantiate(slowdown, new Vector3(RandomSign() * Random.Range(startPos, 13f), 0.4f, RandomSign() * Random.Range(startPos, 15.0f)), Quaternion.identity, transform.parent) : Instantiate(wipeout, new Vector3(RandomSign() * Random.Range(startPos, 13f), 0.4f, RandomSign() * Random.Range(startPos, 15.0f)), Quaternion.identity, transform.parent);
+        var child = (type==0) ? Instantiate(slowdown, new Vector3(RandomSign() * Random.Range(startPos, 13f), height, RandomSign() * Random.Range(startPos, 15.0f)), Quaternion.identity, transform.parent) : Instantiate(wipeout, new Vector3(RandomSign() * Random.Range(startPos, 13f), height, RandomSign() * Random.Range(startPos, 15.0f)), Quaternion.identity, transform.parent);
         //Make a ghost real quick
         child.transform.SetParent(transform);
         child.GetComponent<powerupcontroller>().GhostController = GhostController;

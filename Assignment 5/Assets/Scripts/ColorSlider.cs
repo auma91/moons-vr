@@ -41,6 +41,10 @@ public class ColorSlider : MonoBehaviour
         txt2.color = handle.color;
         txt3.color = handle.color;
         var VRRenderer = VRReticle.GetComponent<Renderer>();
+        PlayerPrefs.SetFloat("ThemeAlpha", handle.color.a);
+        PlayerPrefs.SetFloat("ThemeRed", handle.color.r);
+        PlayerPrefs.SetFloat("ThemeBlue", handle.color.b);
+        PlayerPrefs.SetFloat("ThemeGreen", handle.color.g);
 
         //Call SetColor using the shader property name "_Color" and setting the color to red
         VRRenderer.material.SetColor("_Color", handle.color);

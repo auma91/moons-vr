@@ -10,10 +10,11 @@ public class GhostBuilder : MonoBehaviour
     public GameObject exitButton;
     public int count;
     public int killed = 0;
-    private int roundNumber;
+    private int roundNumber = 0;
     public float time;
     public float startPos;
     public float globalGhostSpeed = 2f;
+    public float spawnHeight;
     public Text killCount;
     public Text roundCount;
     public Text nextRoundText;
@@ -30,11 +31,13 @@ public class GhostBuilder : MonoBehaviour
         startRound = false;
         gameOver = false;
         startPos = 10.25f;
-        nextRound();
+        //nextRound();
+        startFirstRound();
     }
 
     public void startFirstRound() {
         startRound = true;
+        nextRound();
     }
 
     public void PlaySound() { audio.PlayOneShot(SoundToPlay); }
@@ -54,9 +57,9 @@ public class GhostBuilder : MonoBehaviour
         Debug.Log(val);
         if (val >= 0.4f) {
             if (val >= 0.7f) {
-                powerUpControl.GetComponent<powerupgennerator>().makePowerUp(1);
+                powerUpControl.GetComponent<powerupgennerator>().makePowerUp(1,spawnHeight+0.2f);
             }
-            else { powerUpControl.GetComponent<powerupgennerator>().makePowerUp(0); }
+            else { powerUpControl.GetComponent<powerupgennerator>().makePowerUp(0, spawnHeight+0.2f); }
         }
     }
 
@@ -71,7 +74,7 @@ public class GhostBuilder : MonoBehaviour
     }
 
     void makeGhost() {
-        var child = Instantiate(prefab, new Vector3(RandomSign() * Random.Range(startPos, 29f), 1.15f, RandomSign() * Random.Range(startPos, 30.0f)), Quaternion.identity, transform.parent);
+        var child = Instantiate(prefab, new Vector3(RandomSign() * Random.Range(startPos, 29f), spawnHeight, RandomSign() * Random.Range(startPos, 30.0f)), Quaternion.identity, transform.parent);
         //Make a ghost real quick
         child.transform.SetParent(transform);
 
