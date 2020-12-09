@@ -28,4 +28,7 @@ public class mapcontroller : MonoBehaviour
     {
         
     }
+
+    public void quitApp() { Application.Quit(); }
+
 }

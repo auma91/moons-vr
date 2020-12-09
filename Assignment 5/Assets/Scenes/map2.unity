@@ -444,11 +444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1700081041}
     - target: {fileID: 1308954999393343381, guid: f90a5c5a8a347504a8f4cd8c5846e0b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: clickStop
+      value: quitApp
       objectReference: {fileID: 0}
     - target: {fileID: 1308954999978185887, guid: f90a5c5a8a347504a8f4cd8c5846e0b2,
         type: 3}
@@ -1048,6 +1048,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2049330395}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1700081041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1651643492692184010, guid: 8b8429d82c2e72245bae149de04a4324,
+    type: 3}
+  m_PrefabInstance: {fileID: 1193522651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa8f0017421824438158b275d4720cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1719013712
 PrefabInstance:
   m_ObjectHideFlags: 0
