@@ -937,6 +937,11 @@ PrefabInstance:
       propertyPath: ghostHeight
       value: 1.7
       objectReference: {fileID: 0}
+    - target: {fileID: 2056062308419205879, guid: 46d5836315b59f140a898377644036ed,
+        type: 3}
+      propertyPath: spawnHeight
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46d5836315b59f140a898377644036ed, type: 3}
 --- !u!1 &1379213634
@@ -1058,12 +1063,12 @@ PrefabInstance:
     - target: {fileID: 2583834860196716545, guid: 077d9eb48942acb419fa31f3c28c6944,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.018707275
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2583834860196716545, guid: 077d9eb48942acb419fa31f3c28c6944,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2583834860196716545, guid: 077d9eb48942acb419fa31f3c28c6944,
         type: 3}
